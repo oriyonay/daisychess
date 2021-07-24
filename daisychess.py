@@ -295,7 +295,8 @@ def negamax(board, alpha, beta, depth):
 if __name__ == '__main__':
   init_all()
   PLAYERS, turn = ['human', 'computer'], 0 # white, black
-  board = chess('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 ')
+  FEN_START = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 '
+  board = chess(FEN_START)
   board.show()
   while len(list(board.legal_moves())):
     if PLAYERS[turn] == 'human':
